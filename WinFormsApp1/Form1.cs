@@ -62,13 +62,16 @@ namespace WinFormsApp1
                         plataforma = "";
                     }
 
-                    //Recebe o link
-                    string recebeJson = "https://www.freetogame.com/api/filter?tag=shooter"+plataforma;
+                    //Cria o link para o JSON
+                    string link = "https://www.freetogame.com/api/filter?tag=" + CriarLink()+plataforma;
+
+                   
                     /*
                     var webClient = new WebClient();
-                    recebeJson = webClient.DownloadString("https://www.freetogame.com/api/filter?tag=shooter");
+                    recebeJson = webClient.DownloadString(link+plataforma);
                     */
-                    tbResultado.Text = recebeJson;
+
+                    tbResultado.Text = link;
                 }
                 else
                 {
@@ -82,10 +85,168 @@ namespace WinFormsApp1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private string CriarLink()
+        {
+            string link = "";
+            try
+            {
+                if (cb2D.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "2d";
+                    }
+                    else
+                    {
+                        link += ".2d";
+                    }
+                }
+                if (cb3d.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "3d";
+                    }
+                    else
+                    {
+                        link += ".3d";
+                    }
+                }
+                if (cbAcao.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "action";
+                    }
+                    else
+                    {
+                        link += ".action";
+                    }
+                }
+                if (cbAnime.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "anime";
+                    }
+                    else
+                    {
+                        link += ".anime";
+                    }
+                }
+                if (cbArtesMarciais.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "martial-arts";
+                    }
+                    else
+                    {
+                        link += ".martial-arts";
+                    }
+                }
+                if (cbAviao.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "flight";
+                    }
+                    else
+                    {
+                        link += ".flight";
+                    }
+                }
+                if (cbBarco.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "sailing";
+                    }
+                    else
+                    {
+                        link += ".sailing";
+                    }
+                }
+                if (cbBattleRoyale.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "battle-royale";
+                    }
+                    else
+                    {
+                        link += ".battle-royale";
+                    }
+                }
+                if (cbCarta.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "card";
+                    }
+                    else
+                    {
+                        link += ".card";
+                    }
+                }
+                if (cbCorrida.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "racing";
+                    }
+                    else
+                    {
+                        link += ".racing";
+                    }
+                }
+                if (cbEspaco.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "space";
+                    }
+                    else
+                    {
+                        link += ".space";
+                    }
+                }
+                if (cbEsportes.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "sports";
+                    }
+                    else
+                    {
+                        link += ".sports";
+                    }
+                }
+                if (cbFantasia.Checked)
+                {
+                    if (link == "")
+                    {
+                        link += "fantasy";
+                    }
+                    else
+                    {
+                        link += ".fantasy";
+                    }
+                }
+
+                return link;
+
+            }catch (Exception ex)
+            {
+                return link;
+                MessageBox.Show(ex.Message);
+            }
+        }
                 /*
-                cb2D.Checked || cb3d.Checked || cbAcao.Checked || cbAnime.Checked || cbArtesMarciais.Checked ||
-                        cbAviao.Checked || cbBarco.Checked || cbBattleRoyale.Checked || cbCarta.Checked || cbCorrida.Checked ||
-                        cbEspaco.Checked || cbEsportes.Checked || cbFantasia.Checked || cbLowSpec.Checked || cbLuta.Checked ||
+                 || ||  ||  ||  ||
+                         ||  ||  ||  ||  ||
+                         ||  ||  || cbLowSpec.Checked || cbLuta.Checked ||
                         cbMilitar.Checked || cbMmo.Checked || cbMmofps.Checked || cbMmorpg.Checked || cbMmorts.Checked ||
                         cbMmotps.Checked || cbMoba.Checked || cbMortePermanente.Checked || cbMundoAberto.Checked ||
                         cbPixelado.Checked || cbPlataforma.Checked || cbPrimeiraPessoa.Checked || cbPVP.Checked || cbPVP.Checked ||

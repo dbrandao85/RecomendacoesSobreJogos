@@ -77,11 +77,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbPlataforma = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.cbNavegador = new System.Windows.Forms.CheckBox();
             this.cbPc = new System.Windows.Forms.CheckBox();
             this.tbResultado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.gbGeneros.SuspendLayout();
             this.gbPlataforma.SuspendLayout();
             this.SuspendLayout();
@@ -584,8 +584,6 @@
             // cbMmorpg
             // 
             this.cbMmorpg.AutoSize = true;
-            this.cbMmorpg.Checked = true;
-            this.cbMmorpg.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbMmorpg.Location = new System.Drawing.Point(6, 23);
             this.cbMmorpg.Name = "cbMmorpg";
             this.cbMmorpg.Size = new System.Drawing.Size(95, 24);
@@ -624,6 +622,16 @@
             this.gbPlataforma.TabIndex = 4;
             this.gbPlataforma.TabStop = false;
             this.gbPlataforma.Text = "Plataforma";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(6, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(253, 15);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Somente uma plataforma pode ser selecionada";
             // 
             // cbNavegador
             // 
@@ -664,16 +672,6 @@
             this.label3.Size = new System.Drawing.Size(185, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "O Jogo recomendado foi:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(6, 53);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 15);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Somente uma plataforma pode ser selecionada";
             // 
             // Form1
             // 
