@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1
 {
-    internal class DadosJogos
+    internal class InformacoesDoJogo
     {
         public string Id { get; set; }
-        public string Title { get; set; }
-        public string Thumbnail { get; set; }
+        public string Game_url { get; set; }
+        public string Platform { get; set; }
+        public Requirementos minimum_system_requirements { get; set; }
     }
 }

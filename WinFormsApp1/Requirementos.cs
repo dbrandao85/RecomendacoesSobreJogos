@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1
 {
-    internal class DadosJogos
+    internal class Requirementos
     {
-        public string Id { get; set; }
-        public string Title { get; set; }
-        public string Thumbnail { get; set; }
+        public string memory { get; set; }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.buscarJogo = new System.Windows.Forms.Button();
             this.gbGeneros = new System.Windows.Forms.GroupBox();
+            this.cbPVE = new System.Windows.Forms.CheckBox();
             this.cbBarco = new System.Windows.Forms.CheckBox();
             this.cbTurno = new System.Windows.Forms.CheckBox();
             this.cbRpgAcao = new System.Windows.Forms.CheckBox();
@@ -82,8 +83,16 @@
             this.cbPc = new System.Windows.Forms.CheckBox();
             this.tbResultado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbImagem = new System.Windows.Forms.PictureBox();
+            this.gbRam = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbRam = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.gbGeneros.SuspendLayout();
             this.gbPlataforma.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).BeginInit();
+            this.gbRam.SuspendLayout();
             this.SuspendLayout();
             // 
             // buscarJogo
@@ -98,6 +107,7 @@
             // 
             // gbGeneros
             // 
+            this.gbGeneros.Controls.Add(this.cbPVE);
             this.gbGeneros.Controls.Add(this.cbBarco);
             this.gbGeneros.Controls.Add(this.cbTurno);
             this.gbGeneros.Controls.Add(this.cbRpgAcao);
@@ -149,6 +159,16 @@
             this.gbGeneros.TabStop = false;
             this.gbGeneros.Text = "Gêneros";
             this.gbGeneros.Enter += new System.EventHandler(this.gbGenero_Enter);
+            // 
+            // cbPVE
+            // 
+            this.cbPVE.AutoSize = true;
+            this.cbPVE.Location = new System.Drawing.Point(226, 164);
+            this.cbPVE.Name = "cbPVE";
+            this.cbPVE.Size = new System.Drawing.Size(56, 24);
+            this.cbPVE.TabIndex = 44;
+            this.cbPVE.Text = "PVE";
+            this.cbPVE.UseVisualStyleBackColor = true;
             // 
             // cbBarco
             // 
@@ -618,7 +638,7 @@
             this.gbPlataforma.Controls.Add(this.cbPc);
             this.gbPlataforma.Location = new System.Drawing.Point(12, 258);
             this.gbPlataforma.Name = "gbPlataforma";
-            this.gbPlataforma.Size = new System.Drawing.Size(272, 79);
+            this.gbPlataforma.Size = new System.Drawing.Size(386, 79);
             this.gbPlataforma.TabIndex = 4;
             this.gbPlataforma.TabStop = false;
             this.gbPlataforma.Text = "Plataforma";
@@ -660,7 +680,7 @@
             this.tbResultado.Name = "tbResultado";
             this.tbResultado.ReadOnly = true;
             this.tbResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbResultado.Size = new System.Drawing.Size(745, 74);
+            this.tbResultado.Size = new System.Drawing.Size(541, 154);
             this.tbResultado.TabIndex = 5;
             // 
             // label3
@@ -673,11 +693,83 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "O Jogo recomendado foi:";
             // 
+            // pbImagem
+            // 
+            this.pbImagem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbImagem.Location = new System.Drawing.Point(572, 409);
+            this.pbImagem.Name = "pbImagem";
+            this.pbImagem.Size = new System.Drawing.Size(225, 154);
+            this.pbImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagem.TabIndex = 7;
+            this.pbImagem.TabStop = false;
+            // 
+            // gbRam
+            // 
+            this.gbRam.Controls.Add(this.label7);
+            this.gbRam.Controls.Add(this.label6);
+            this.gbRam.Controls.Add(this.cbRam);
+            this.gbRam.Location = new System.Drawing.Point(419, 258);
+            this.gbRam.Name = "gbRam";
+            this.gbRam.Size = new System.Drawing.Size(351, 79);
+            this.gbRam.TabIndex = 8;
+            this.gbRam.TabStop = false;
+            this.gbRam.Text = "RAM";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(80, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "GB";
+            // 
+            // cbRam
+            // 
+            this.cbRam.FormattingEnabled = true;
+            this.cbRam.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "4",
+            "8",
+            "16",
+            "32"});
+            this.cbRam.Location = new System.Drawing.Point(16, 22);
+            this.cbRam.Name = "cbRam";
+            this.cbRam.Size = new System.Drawing.Size(58, 28);
+            this.cbRam.TabIndex = 0;
+            this.cbRam.Text = "0";
+            this.cbRam.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(419, 233);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(262, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Escolha o máximo de memória RAM";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(7, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(255, 15);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Se for escolhido o valor 0, não terá filtro de RAM";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 509);
+            this.ClientSize = new System.Drawing.Size(808, 587);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.gbRam);
+            this.Controls.Add(this.pbImagem);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbResultado);
             this.Controls.Add(this.gbPlataforma);
@@ -691,6 +783,9 @@
             this.gbGeneros.PerformLayout();
             this.gbPlataforma.ResumeLayout(false);
             this.gbPlataforma.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagem)).EndInit();
+            this.gbRam.ResumeLayout(false);
+            this.gbRam.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -752,5 +847,12 @@
         private CheckBox cbNavegador;
         private CheckBox cbPc;
         private Label label4;
+        private CheckBox cbPVE;
+        private PictureBox pbImagem;
+        private GroupBox gbRam;
+        private ComboBox cbRam;
+        private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }
